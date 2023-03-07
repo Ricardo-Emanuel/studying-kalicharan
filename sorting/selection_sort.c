@@ -3,12 +3,14 @@
 # define MaxNumbers 10
 
 void swap(int list[], int i, int j) {
+    // Used only to swap values
     int temp = list[i];
     list[i] = list[j];
     list[j] = temp;
 }
 
 int getSmallest(int list[], int lo, int hi) {
+    // Get the smallest value of the stipulated range
     int small = lo;
     for (int h = lo + 1; h <= hi; h++) {
         if (list[h] < list[small]) small = h;
