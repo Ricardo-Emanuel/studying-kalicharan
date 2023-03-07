@@ -6,6 +6,7 @@
 # define MaxNameBuffer MaxNameSize + 1
 # define MaxNames 8
 
+// This is a regular insertion sort but sorts strings
 void insertionSort(int lo, int hi, char list[][MaxNameBuffer]) {
     char key[MaxNameBuffer];
     for (int h = lo + 1; h <= hi; h++) {
@@ -22,7 +23,9 @@ void insertionSort(int lo, int hi, char list[][MaxNameBuffer]) {
 int main() {
     void insertionSort(int, int, char[][MaxNameBuffer]);
     char name[MaxNames][MaxNameBuffer] = {"Taylor, Victor", "Duncan, Denise", 
-                                    "Owen, David", "Khan, Carol"};
+                                    "Owen, David", "Khan, Carol", "Ali, Michel",
+                                    "Sawh, Anisa", "Ramdhan, Kamal", 
+                                    "Singh, Krishna"};
     insertionSort(0, MaxNames-1, name);
     printf("\nThe sorted names are\n\n");
     for (int h = 0; h < MaxNames; h++) printf("%s\n", name[h]);
