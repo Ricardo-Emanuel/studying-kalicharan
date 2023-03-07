@@ -4,6 +4,7 @@
 
 void swap(int list[], int i, int j) {
     // Used only to swap values
+    // O(1)
     int temp = list[i];
     list[i] = list[j];
     list[j] = temp;
@@ -12,6 +13,8 @@ void swap(int list[], int i, int j) {
 int getSmallest(int list[], int lo, int hi) {
     // Get the smallest value of the stipulated range
     int small = lo;
+
+    // O(n)
     for (int h = lo + 1; h <= hi; h++) {
         if (list[h] < list[small]) small = h;
     }
@@ -23,6 +26,8 @@ void selectionSort(int list[], int lo, int hi) {
     // Because they are only used here
     int getSmallest(int[], int, int);
     void swap(int[], int, int);
+
+    // O(n^2)
     for (int h = lo; h < hi; h++) {
         int s = getSmallest(list, h, hi);
         swap(list, h, s);
